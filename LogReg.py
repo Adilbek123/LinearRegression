@@ -1,17 +1,21 @@
 import numpy as np
-import pandas as pd
 
 class LogisticRegression:
-    def __init__(self, learning_rate=0.01, num_iterations=1000, penalty=None):
-        self.learning_rate = learning_rate
-        self.num_iterations = num_iterations
-        self.penalty = penalty
+    def __init__(self):
+        """
+        :param
+        :return
+        """
         self.coef_ = None
         self.intercept_ = None
 
-    
-    def fit(self, X, y, *args, **kwargs):
-        #initialize parameters
+    def fit(self, X: np.ndarray, y: np.ndarray, learning_rate=0.01: float, num_iterations=1000: int, penalty=None: str):
+        """
+        
+        """
+        self.learning_rate = learning_rate
+        self.num_iterations = num_iterations
+        self.penalty = penalty
         self.coef_ = np.zeros(X.shape[1])
         self.intercept_ = 0
 
