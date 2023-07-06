@@ -1,10 +1,11 @@
 import numpy as np
 
-def sigmoid(x):
+def sigmoid(z: np.ndarray):
     """
-    sigmoid
+    :param z is a regression to be made into a sigmoid    
+
     """
-    return 1/(1 + np.exp(-x))
+    return 1/(1 + np.exp(-z))
 
 
 class LogisticRegression(X, y):
@@ -15,7 +16,9 @@ class LogisticRegression(X, y):
         """
 
         """
-        pass
+        self.coef_ = coef_
+        self.intercept_ = intercept
+        
     def fit(self, X, y, penalty="l1", learning_rate = 0.1, num_iter = 1000):
         """
         
