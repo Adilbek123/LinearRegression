@@ -18,12 +18,16 @@ class LogisticRegression(X, y):
         """
         self.coef_ = coef_
         self.intercept_ = intercept
-        
+
     def fit(self, X, y, penalty="l1", learning_rate = 0.1, num_iter = 1000):
         """
         
         """
-        pass
+        
+        self.coef_ = np.ndarray()
+        self.intercept = 0 
+
+
     def predict(self, X, y):
         """
         
